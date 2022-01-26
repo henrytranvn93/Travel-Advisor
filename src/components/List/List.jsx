@@ -18,7 +18,6 @@ export default function List( { places, childClicked, isLoading }) {
 
     }, [places]);
 
-
     return (
         <div className={classes.container}>
            <Typography variant="h4">Restaurants, Hotels & Attractions around you</Typography>
@@ -48,13 +47,12 @@ export default function List( { places, childClicked, isLoading }) {
                 </FormControl>
                 <Grid container space={3} className={classes.list}>
                     {places?.map((place, i) => (
-                        <Grid item key={i} xs={12}>
+                        <Grid ref={elRefs[i]} item key={i} xs={12}>
                             <PlaceDetails 
                                     place={place}
                                     selected={Number(childClicked) === i}
                                     refProp={elRefs[i]}
                                 />
-
                         </Grid>
                     ))}
 
