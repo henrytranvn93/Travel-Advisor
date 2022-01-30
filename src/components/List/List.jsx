@@ -20,7 +20,7 @@ export default function List( { places, childClicked, isLoading, type, setType, 
         <div className={classes.container}>
            <Typography variant="h4">Restaurants, Hotels & Attractions around you</Typography>
            {isLoading ? (
-               <div ClassName={classes.loading}>
+               <div className={classes.loading}>
                    <CircularProgress size="5rem" />
                </div>
 
